@@ -24,8 +24,7 @@ RUN   ln -fs /bin/sh /usr/bin/sh && \
      
 COPY patch-eagle /usr/local/bin/
 COPY com.autodesk.Eagle.desktop /usr/share/applications/
-RUN mkdir -p /usr/share/icons/Eagle
-COPY com.autodesk.Eagle.png /usr/share/icons/Eagle
+COPY com.autodesk.Eagle.png /usr/share/icons/hicolor/128x128/apps/
 
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
     locale-gen
