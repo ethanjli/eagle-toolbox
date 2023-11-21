@@ -31,9 +31,7 @@ sudo tar -xzf Autodesk_EAGLE_9.6.2_English_Linux_64bit.tar.gz -C /opt
 sudo mv /opt/eagle-9.6.2 /opt/eagle
 ```
 
-Note that you should extract Eagle to a path which doesn't have any spaces inside it.
-
-Then run the `patch-eagle` command with the path you had extracted Eagle to, for example:
+Then run the `patch-eagle` command:
 
 ```
 sudo patch-eagle
@@ -53,4 +51,4 @@ These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosi
 cosign verify --key cosign.pub ghcr.io/ethanjli/eagle-toolbox
 ```
 
-If you're forking this repo you should [read the docs](https://docs.github.com/en/actions/security-guides/encrypted-secrets) on keeping secrets in github. You need to [generate a new keypair](https://docs.sigstore.dev/cosign/overview/) with cosign (using `cosign generate-key-pair`). The public key should be in your public repo (your users need it to check the signatures), and you should paste the private key in Settings -> Secrets -> Actions as a repository secret named `SIGNING_SECRET`.
+If you're forking this repo you should [read the docs](https://docs.github.com/en/actions/security-guides/encrypted-secrets) on keeping secrets in github. You need to [generate a new keypair](https://docs.sigstore.dev/cosign/overview/) with cosign (using `cosign generate-key-pair` with no password for the private key). The public key should be in your public repo (your users need it to check the signatures), and you should paste the private key in Settings -> Secrets -> Actions as a repository secret named `SIGNING_SECRET`.

@@ -22,6 +22,6 @@ RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update
      
-COPY patch-eagle /usr/local/bin/
+COPY patch-eagle /usr/share/bin/
 COPY com.autodesk.Eagle.desktop /usr/share/applications/
 COPY com.autodesk.Eagle.png /usr/share/icons/hicolor/128x128/apps/
