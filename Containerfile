@@ -9,7 +9,7 @@ COPY toolbox-packages /
 RUN apt-get update && \
     apt-get upgrade -y && \
     DEBIAN_FRONTEND=noninteractive apt-get -y install \
-        $(grep -v '^#' /toolbox-packages | xargs)
+        $(grep -v '^#' /toolbox-packages | xargs) && \
     rm -rd /var/lib/apt/lists/*
 RUN rm /toolbox-packages
 
