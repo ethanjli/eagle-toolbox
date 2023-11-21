@@ -9,3 +9,7 @@ rm -r $EAGLE_PATH/plugins
 rm $EAGLE_PATH/qt.conf
 rm $EAGLE_PATH/libexec/QtWebEngineProcess
 rm $EAGLE_PATH/libexec/qt.conf
+
+echo "Setting default locale..."
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
