@@ -1,0 +1,9 @@
+#!/bin/sh -ux
+EAGLE_PATH="/opt/eagle"
+
+echo "Setting a default locale..."
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+
+echo "Making Eagle runnable by $USER..."
+sudo chown -R $USER $EAGLE_PATH

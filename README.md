@@ -1,6 +1,6 @@
 # eagle-toolbox
 
-eagle-toolbox is an OCI image (automatically built on GitHub Actions) for Distrobox/Toolbx providing all dependencies necessary for running Autodesk Eagle. This image does not redistribute Autodesk Eagle, but we provide instructions to make the installation process as easy as possible.
+eagle-toolbox is an OCI image (automatically built on GitHub Actions) for Distrobox/Toolbx providing Autodesk Eagle.
 
 ## How to use
 
@@ -20,34 +20,15 @@ toolbox create -i ghcr.io/ethanjli/eagle-toolbox -c eagle
 toolbox enter eagle
 ```
 
-### Install Autodesk Eagle
+### Set Up Autodesk Eagle
 
-First, you will need to use your web browser to download the Linux version of Autodesk Eagle from <https://www.autodesk.com/products/eagle/free-download> (Autodesk seems to prevent that the download from being initiated on the command-line). You should save it to somewhere accessible from within your instance of `eagle-toolbox`.
-
-In your instance of `eagle-toolbox`, navigate to the directory where you saved the download. Extract the downloaded `.tar.gz` file to `/opt/eagle`, for example:
+In your instance of `eagle-toolbox`, run the `prepare-eagle` command:
 
 ```
-sudo tar -xzf Autodesk_EAGLE_9.6.2_English_Linux_64bit.tar.gz -C /opt
-sudo mv /opt/eagle-9.6.2 /opt/eagle
+sudo prepare-eagle
 ```
 
-Then run the `patch-eagle` command:
-
-```
-sudo patch-eagle
-```
-
-## Export Distrobox App
-
-You will need to set the owner of `/opt/eagle` to your current user, so that you can launch Eagle. Run:
-
-```
-sudo chown -R $USER /opt/eagle
-```
-
-
-
-Now you can export the `eagle` app, for example:
+This does some work which cannot be done as part of the container image build process. Now you can export the `eagle` app, for example:
 
 ```
 distrobox-export --app eagle
