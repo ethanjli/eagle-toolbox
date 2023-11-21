@@ -37,6 +37,16 @@ Then run the `patch-eagle` command:
 sudo patch-eagle
 ```
 
+## Export Distrobox App
+
+You will need to set the owner of `/opt/eagle` to your current user, so that you can launch Eagle. Run:
+
+```
+sudo chown -R $USER /opt/eagle
+```
+
+
+
 Now you can export the `eagle` app, for example:
 
 ```
