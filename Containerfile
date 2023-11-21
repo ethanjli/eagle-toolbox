@@ -24,7 +24,6 @@ RUN   ln -fs /bin/sh /usr/bin/sh && \
      
 COPY patch-eagle /usr/local/bin/
 COPY com.autodesk.Eagle.desktop /usr/share/applications/
-RUN chmod a+r /usr/share/applications/com.autodesk.Eagle.desktop
 RUN mkdir -p /usr/share/icons/Eagle
 COPY com.autodesk.Eagle.png /usr/share/icons/Eagle
 
