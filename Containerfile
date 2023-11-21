@@ -13,7 +13,7 @@ RUN apt-get update && \
     rm -rd /var/lib/apt/lists/*
 RUN rm /toolbox-packages
 
-RUN curl -sS https://starship.rs/install.sh | sh
+RUN curl -sS https://starship.rs/install.sh | sh -- --yes
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
