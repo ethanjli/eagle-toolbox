@@ -22,7 +22,7 @@ RUN   ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update
 
 # Download Eagle
-RUN wget -P /opt/ https://eagle-updates.circuits.io/downloads/9.6.2/Autodesk_EAGLE_9.6.2_English_Linux_64bit.tar.gz && \
+RUN wget -P /opt/ https://eagle-updates.circuits.io/downloads/9_6_2/Autodesk_EAGLE_9.6.2_English_Linux_64bit.tar.gz && \
     tar -xzf /opt/Autodesk_EAGLE_9.6.2_English_Linux_64bit.tar.gz -C /opt && \
     mv /opt/eagle-9.6.2 /opt/eagle
 
