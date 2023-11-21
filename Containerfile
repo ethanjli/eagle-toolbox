@@ -23,9 +23,8 @@ RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update
      
 COPY patch-eagle /usr/local/bin/
-RUN mkdir -p /usr/local/share/applications
-COPY com.autodesk.Eagle.desktop /usr/local/share/applications/
-RUN chmod a+r /usr/local/share/applications/com.autodesk.Eagle.desktop
+COPY com.autodesk.Eagle.desktop /usr/share/applications/
+RUN chmod a+r /usr/share/applications/com.autodesk.Eagle.desktop
 RUN mkdir -p /usr/share/icons/Eagle
 COPY com.autodesk.Eagle.png /usr/share/icons/Eagle
 
