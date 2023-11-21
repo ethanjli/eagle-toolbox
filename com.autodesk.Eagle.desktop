@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Autodesk Eagle
+GenericName=EDA Suite
+Comment=EDA Suite
+Categories=Science & Engineering
+Exec=/opt/eagle/eagle
+Icon=com.autodesk.Eagle
+NoDisplay=false
+StartupNotify=true
+Terminal=false
+Type=Application

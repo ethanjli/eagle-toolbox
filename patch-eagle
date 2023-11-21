@@ -1,0 +1,11 @@
+#!/bin/sh -ux
+EAGLE_PATH="/opt/eagle"
+
+echo "Patching Eagle at $EAGLE_PATH..."
+# Note: this is based on the instructions at
+# https://forums.autodesk.com/t5/eagle-forum/running-eagle-on-fedora-33-dialogs-fail-display-properly-appears/m-p/10374674/highlight/true#M34418
+rm -r $EAGLE_PATH/lib/libQt*
+rm -r $EAGLE_PATH/plugins
+rm $EAGLE_PATH/qt.conf
+rm $EAGLE_PATH/libexec/QtWebEngineProcess
+rm $EAGLE_PATH/libexec/qt.conf
