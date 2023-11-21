@@ -22,7 +22,7 @@ toolbox enter eagle
 
 ### Set Up Autodesk Eagle
 
-In your instance of `eagle-toolbox`, run the `prepare-eagle` command:
+In your instance of `eagle-toolbox`, run the `prepare-eagle` command as root:
 
 ```
 sudo prepare-eagle
